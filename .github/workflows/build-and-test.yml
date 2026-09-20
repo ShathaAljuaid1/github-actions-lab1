@@ -33,3 +33,9 @@ jobs:
     - name: Run Tests
       run: |
         pytest tests/
+
+    - name: Use Secret
+      env:
+        API_KEY: ${{ secrets.API_KEY }}
+      run: |
+        echo "API key is: $API_KEY"
